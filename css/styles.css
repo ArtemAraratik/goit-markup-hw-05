@@ -320,6 +320,7 @@ position: relative;
    display: flex;     
  }
  .what-we-do-items {
+   position: relative;
   text-decoration: none;
  }
  .what-we-do-items:not(:first-child) {
@@ -329,6 +330,28 @@ position: relative;
     width: 370px;
     height: 294px;
     padding-bottom: 94px; 
+    
+ }
+ .what-we-do-names {
+   position: absolute;
+   bottom: 0;   
+   width: 370px;
+   height: 70px;
+   background: rgba(47, 48, 58, 0.8);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ .what-we-do-text {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 0,8;
+   text-align: center;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: #FFFFFF;
  }
  .title-h2 {
     font-weight: 700;
@@ -635,6 +658,7 @@ position: relative;
    opacity: 0;
    transform: translateY(295px);
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   overflow: hidden;
 }
 
 .portfolio-phototext-box {
@@ -666,13 +690,21 @@ position: relative;
    opacity: 0; 
    transform: translateY(295px);
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+   overflow: hidden;
 }
-.portfolio-link:hover .portfolio-phototext {
-   
+.portfolio-link:hover .portfolio-phototext {   
    transform: translateY(0);
    opacity: 1;
 }
 .portfolio-link:hover .portfolio-thumb::before {
+   transform: translateY(0);
+   opacity: 1;
+}
+.portfolio-link:focus .portfolio-phototext {   
+   transform: translateY(0);
+   opacity: 1;
+}
+.portfolio-link:focus .portfolio-thumb::before {
    transform: translateY(0);
    opacity: 1;
 }
